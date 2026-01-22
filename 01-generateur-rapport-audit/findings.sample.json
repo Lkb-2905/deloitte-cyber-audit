@@ -1,0 +1,4 @@
+[
+  {"title": "XSS reflechi", "severity": "Eleve", "desc": "Injection possible via parametre q."},
+  {"title": "TLS obsolete", "severity": "Moyen", "desc": "TLS 1.0 actif."}
+]

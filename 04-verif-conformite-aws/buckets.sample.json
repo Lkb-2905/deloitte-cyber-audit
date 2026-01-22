@@ -1,0 +1,4 @@
+[
+  {"name": "corp-backups", "public": false},
+  {"name": "public-logs", "public": true}
+]

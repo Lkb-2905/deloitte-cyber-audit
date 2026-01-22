@@ -1,0 +1,2 @@
+Impact=5 Probabilite=4
+Impact=3 Probabilite=2
