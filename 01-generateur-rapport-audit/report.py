@@ -1,5 +1,5 @@
 import argparse
-from datetime import datetime
+from datetime import datetime, timezone
 
 
 TEMPLATE = """<!doctype html>
@@ -41,7 +41,7 @@ def main() -> None:
         {"title": "Faille XSS", "severity": "Eleve", "desc": "Injection possible via champ commentaire."},
         {"title": "SSL faible", "severity": "Moyen", "desc": "TLS 1.0 active sur le serveur."},
     ]
-    html = TEMPLATE.format(date=datetime.utcnow().date(), findings=render_findings(findings))
+    html = TEMPLATE.format(date=datetime.now(timezone.utc).date(), findings=render_findings(findings))
     with open(args.output, "w", encoding="utf-8") as handle:
         handle.write(html)
     print(f"Rapport genere: {args.output}")
